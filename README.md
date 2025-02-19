@@ -1,5 +1,8 @@
 # Setup the application
 
+# Pre-requisite
+You need to install PHP, MySQL, composer.
+
 ## Setup API
 
 In "api" directory, make copy of .env.example to .env and update the mysql db settings
@@ -12,3 +15,17 @@ DB_USERNAME = {YOUR_DB_USER}
 DB_PASSWORD = {YOUR_DB_PASSWORD}
 ```
 
+# import customer csv
+
+use following command to import customers.csv
+
+```
+cd api
+php artisan import:customer ../customers.csv
+```
+
+Also you can run unit test to test the import.
+
+```
+php artisan test
+```
