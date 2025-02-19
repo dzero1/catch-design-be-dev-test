@@ -12,6 +12,24 @@ class UserAuthTest extends TestCase
     use RefreshDatabase;
 
     /**
+     * Test invalid user login
+     */
+    public function test_invalid_user_login(): void
+    {
+        // seed test user
+        $this->seed(DatabaseSeeder::class);
+
+        $response = $this->post('/api/login', [
+            'email' => 'test@example.com',
+            'password' => 'password',
+        ]);
+
+        $response
+            ->assertStatus(401)
+            ->assertJson(['message' => 'Invalid Credentials']);
+    }
+
+    /**
      * Test user login
      */
     public function test_user_login(): void
