@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use ErrorException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Symfony\Component\Console\Exception\RuntimeException;
 use Tests\TestCase;
