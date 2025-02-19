@@ -24,7 +24,7 @@ return new class extends Migration
         });
         
         // customer ip_address record in a separate table. later we can use it to track the ip address changers
-        Schema::create('customers_ip_address', function (Blueprint $table) {
+        Schema::create('customer_ip_addresses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id');
             $table->string('ip_address');
@@ -32,7 +32,7 @@ return new class extends Migration
         });
 
         // keep customer company related informations. company,city,title,website
-        Schema::create('customers_companies', function (Blueprint $table) {
+        Schema::create('customer_companies', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id');
             $table->string('company');
