@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Customer;
 use Database\Seeders\CustomerSeeder;
-use Database\Seeders\DatabaseSeeder;
+use Database\Seeders\UserSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -21,7 +21,7 @@ class CustomerTest extends TestCase
         parent::setUp();
         
         // seed test user
-        $this->seed(DatabaseSeeder::class);
+        $this->seed(UserSeeder::class);
         
         // seed test customer
         $this->seed(CustomerSeeder::class);

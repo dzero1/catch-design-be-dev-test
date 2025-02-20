@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Database\Seeders\DatabaseSeeder;
+use Database\Seeders\UserSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -17,7 +17,7 @@ class UserAuthTest extends TestCase
     public function test_invalid_user_login(): void
     {
         // seed test user
-        $this->seed(DatabaseSeeder::class);
+        $this->seed(UserSeeder::class);
 
         $response = $this->post('/api/login', [
             'email' => 'test@example.com',
@@ -35,7 +35,7 @@ class UserAuthTest extends TestCase
     public function test_user_login(): void
     {
         // seed test user
-        $this->seed(DatabaseSeeder::class);
+        $this->seed(UserSeeder::class);
 
         $response = $this->post('/api/login', [
             'email' => 'test@example.com',
@@ -53,7 +53,7 @@ class UserAuthTest extends TestCase
     public function test_user_logout(): void
     {
         // seed test user
-        $this->seed(DatabaseSeeder::class);
+        $this->seed(UserSeeder::class);
 
         // login
         $response = $this->post('/api/login', [
