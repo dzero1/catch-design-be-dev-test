@@ -54,6 +54,7 @@ class CustomerController extends Controller
             'total_pages' => $customers_paginated->lastPage(),
             'from' => $customers_paginated->firstItem(),
             'to' => $customers_paginated->lastItem(),
+            'total' => $customers_paginated->total(),
         ]);
     }
     
