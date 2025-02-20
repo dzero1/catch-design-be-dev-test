@@ -61,3 +61,26 @@ To test all related functions you can run following command. (*to run in a testi
 ```
 php artisan test --env=testing
 ```
+
+
+# Web App
+
+Simple web app is created using Vite+React + Typescript + Tailwind. To run development service do following command.
+
+*Used toolkit are node, npm. Make sure you have node v20.15.1 and npm 8.19.1 (or related)*
+
+```
+cd app
+npm install
+npm run dev
+```
+
+***Make sure the api server is running before test with app***
+
+Use following credentials to test
+```
+username: test@example.com
+password: Password@321
+```
+
+*default laravel api serve endpoint will be http://127.0.0.1:8000. If you want to change the api url for web app, update it in .env file and restart the vite service*
