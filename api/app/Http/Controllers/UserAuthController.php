@@ -46,7 +46,6 @@ class UserAuthController extends Controller
     /** 
      * Handle user login 
      * 
-     * @param Request $request
      * @return JsonResponse
      * */
     public function logout(): JsonResponse
